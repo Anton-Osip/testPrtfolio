@@ -12,9 +12,9 @@ export function Footer() {
 						<SocialLink>
 							<Icon
 								idIcon='instagramIcon'
-								width='21px'
-								height='21px'
-								viewBox='0 0 21px 21px'
+								width='21'
+								height='21'
+								viewBox='0 0 21 21'
 							/>
 						</SocialLink>
 					</SocialItem>
@@ -22,9 +22,9 @@ export function Footer() {
 						<SocialLink>
 							<Icon
 								idIcon='telegramIcon'
-								width='21px'
-								height='21px'
-								viewBox='0 0 21px 21px'
+								width='21'
+								height='21'
+								viewBox='0 0 21 21'
 							/>
 						</SocialLink>
 					</SocialItem>
@@ -32,9 +32,9 @@ export function Footer() {
 						<SocialLink>
 							<Icon
 								idIcon='vkIcon'
-								width='21px'
-								height='21px'
-								viewBox='0 0 21px 21px'
+								width='21'
+								height='21'
+								viewBox='0 0 21 21'
 							/>
 						</SocialLink>
 					</SocialItem>
@@ -42,9 +42,9 @@ export function Footer() {
 						<SocialLink>
 							<Icon
 								idIcon='linkedinIcon'
-								width='21px'
-								height='21px'
-								viewBox='0 0 21px 21px'
+								width='21'
+								height='21'
+								viewBox='0 0 21 21'
 							/>
 						</SocialLink>
 					</SocialItem>

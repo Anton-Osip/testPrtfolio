@@ -17,7 +17,7 @@ export function Main() {
 	)
 }
 
-const StyledMain = styled.div`
+const StyledMain = styled.section`
 	background-color: #a2ebff;
 	min-height: 100vh;
 `
