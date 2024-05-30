@@ -24,6 +24,7 @@ export const GlobalStyled = createGlobalStyle`
 	a{
 		text-decoration:none;
 		color:inherit;
+		cursor:pointer;
 	}
 	ul{
 		list-style:none;
