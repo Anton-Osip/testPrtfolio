@@ -2,13 +2,14 @@ import styled from 'styled-components'
 import image from '../../../assets/images/photo.jpg'
 import { Container } from '../../../components/Container'
 import { FlexWrapper } from '../../../components/FlexWrapper'
+import { font } from '../../../styles/Common'
 import { theme } from '../../../styles/Theme'
 
 export function Main() {
 	return (
 		<StyledMain>
 			<Container>
-				<FlexWrapper align='center' justify='space-between'>
+				<FlexWrapper align='center' justify='space-around' wrap='wrap'>
 					<div>
 						<SmallText>Hi There</SmallText>
 						<Name>
@@ -34,6 +35,12 @@ const Photo = styled.img`
 	width: 350px;
 	height: 430px;
 	object-fit: cover;
+	margin-right: 20px;
+
+	@media ${theme.media.mobile} {
+		width: 310px;
+		height: 380px;
+	}
 `
 const PhotoWrapper = styled.div`
 	position: relative;
@@ -49,12 +56,25 @@ const PhotoWrapper = styled.div`
 		top: -24px;
 		left: 24px;
 		z-index: -1;
+		@media ${theme.media.mobile} {
+			width: 314px;
+			height: 414px;
+			top: -17px;
+			left: 20px;
+		}
+	}
+	@media ${theme.media.mobile} {
+		margin-top: 65px;
 	}
 `
 const MainTitle = styled.h1`
 	color: rgb(255, 255, 255);
-	font-size: 27px;
-	font-weight: 400;
+	${font({
+		weight: 400,
+		Fmax: 27,
+		Fmin: 20,
+	})}
+
 	letter-spacing: 0%;
 `
 const SmallText = styled.span`
@@ -63,14 +83,17 @@ const SmallText = styled.span`
 `
 
 const Name = styled.h2`
-	font-family: Josefin Sans, sans-serif;
-	font-size: 50px;
-	font-weight: 700;
-	letter-spacing: 5%;
+	${font({
+		family: 'Josefin Sans, sans-serif',
+		weight: 700,
+		Fmax: 50,
+		Fmin: 36,
+	})}
 	margin: 10px 0;
 	span {
 		position: relative;
 		z-index: 0;
+		white-space: nowrap;
 		&::before {
 			content: '';
 			position: absolute;
@@ -81,6 +104,9 @@ const Name = styled.h2`
 			width: 100%;
 			height: 20px;
 			background-color: ${theme.colors.accent};
+		}
+		@media ${theme.media.mobile} {
+			margin: 15px 0 22px;
 		}
 	}
 `
