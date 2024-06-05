@@ -19,8 +19,6 @@ export const GlobalStyled = createGlobalStyle`
 		-moz-osx-font-smoothing: grayscale;
 		color:${theme.colors.font};
 		line-height: 1.2;
-	
-	
 	}
 
 	a{
@@ -31,10 +29,27 @@ export const GlobalStyled = createGlobalStyle`
 	ul{
 		list-style:none;
 	}
-	button{background-color: unset;border:none;cursor:pointer;color:inherit;}
-	section{padding: 100px 0;}
-	section:nth-of-type(odd){background-color: ${theme.colors.primaryBg};}
-	section:nth-of-type(even){background-color: ${theme.colors.secondaryBg};}
+	button{
+		background-color: unset;
+		border:none;
+		cursor:pointer;
+		color:inherit;
+	}
+
+	section{
+		padding: 100px 0;
+		@media ${theme.media.mobile}{
+			padding:80px 0;
+		}
+	}
+
+	section:nth-of-type(odd){
+		background-color: ${theme.colors.primaryBg};
+	}
+
+	section:nth-of-type(even){
+		background-color: ${theme.colors.secondaryBg};
+	}
 
 	h3{
 		font-family: Josefin Sans, sans-serif;
