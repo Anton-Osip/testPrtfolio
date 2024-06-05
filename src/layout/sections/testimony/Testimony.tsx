@@ -1,4 +1,5 @@
 import styled from 'styled-components'
+import { Container } from '../../../components/Container'
 import { FlexWrapper } from '../../../components/FlexWrapper'
 import { SectionTitle } from '../../../components/SectionTitle'
 import { Icon } from '../../../components/icon/Icon'
@@ -8,13 +9,15 @@ import { IconWrapper } from '../skills/skill/Skill'
 export function Testimony() {
 	return (
 		<StyledTestimony>
-			<SectionTitle>Testimony</SectionTitle>
-			<FlexWrapper direction='column' align='center'>
-				<IconWrapper>
-					<Icon idIcon='quoteIcon' />
-				</IconWrapper>
-				<Slider />
-			</FlexWrapper>
+			<Container>
+				<SectionTitle>Testimony</SectionTitle>
+				<FlexWrapper direction='column' align='center'>
+					<IconWrapper>
+						<Icon idIcon='quoteIcon' />
+					</IconWrapper>
+					<Slider />
+				</FlexWrapper>
+			</Container>
 		</StyledTestimony>
 	)
 }
