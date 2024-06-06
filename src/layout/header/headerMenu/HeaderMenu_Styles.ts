@@ -1,39 +1,7 @@
 import styled, { css } from 'styled-components'
 import { theme } from '../../../styles/Theme'
 
-export function MobileMenu(props: { menuItems: Array<string> }) {
-	return (
-		<StyledMobileMenu>
-			<BurgerButton isOpen={false}>
-				<span></span>
-			</BurgerButton>
-			<MobileMenuPopup isOpen={false}>
-				<ul>
-					{props.menuItems.map((item, index) => (
-						<ListItem key={index}>
-							<Link href=''>
-								{item}
-								<Mask>
-									<span>{item}</span>
-								</Mask>
-								<Mask>
-									<span>{item}</span>
-								</Mask>
-							</Link>
-						</ListItem>
-					))}
-				</ul>
-			</MobileMenuPopup>
-		</StyledMobileMenu>
-	)
-}
-
-const StyledMobileMenu = styled.nav`
-	display: none;
-	@media ${theme.media.tablet} {
-		display: block;
-	}
-`
+const StyledMobileMenu = styled.nav``
 const BurgerButton = styled.button<{ isOpen: boolean }>`
 	position: fixed;
 	width: 200px;
@@ -89,6 +57,13 @@ const BurgerButton = styled.button<{ isOpen: boolean }>`
 	}
 `
 
+const StyledDesktopMenu = styled.nav`
+	ul {
+		display: flex;
+		gap: 30px;
+		justify-content: center;
+	}
+`
 const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
 	position: fixed;
 	background-color: rgba(31, 31, 32, 0.9);
@@ -132,7 +107,15 @@ const Mask = styled.span`
 	}
 `
 
-const ListItem = styled.li`
+const Link = styled.a`
+	font-family: Josefin Sans, sans-serif;
+	font-size: 30px;
+	font-weight: 400;
+	text-align: center;
+	color: transparent;
+`
+
+const MenuItem = styled.li`
 	position: relative;
 
 	&::before {
@@ -162,10 +145,13 @@ const ListItem = styled.li`
 		}
 	}
 `
-const Link = styled.a`
-	font-family: Josefin Sans, sans-serif;
-	font-size: 30px;
-	font-weight: 400;
-	text-align: center;
-	color: transparent;
-`
+
+export const S = {
+	StyledMobileMenu,
+	BurgerButton,
+	StyledDesktopMenu,
+	MobileMenuPopup,
+	Mask,
+	Link,
+	MenuItem,
+}
