@@ -1,3 +1,4 @@
+import Tilt from 'react-parallax-tilt'
 import Typewriter from 'typewriter-effect'
 import image from '../../../assets/images/photo.jpg'
 import { Container } from '../../../components/Container'
@@ -25,9 +26,11 @@ export const Main: React.FC = () => {
 							/>
 						</S.MainTitle>
 					</div>
-					<S.PhotoWrapper>
-						<S.Photo src={image} alt='photo' />
-					</S.PhotoWrapper>
+					<Tilt>
+						<S.PhotoWrapper>
+							<S.Photo src={image} alt='photo' />
+						</S.PhotoWrapper>{' '}
+					</Tilt>
 				</FlexWrapper>
 			</Container>
 		</S.Main>
