@@ -1,3 +1,4 @@
+import Typewriter from 'typewriter-effect'
 import image from '../../../assets/images/photo.jpg'
 import { Container } from '../../../components/Container'
 import { FlexWrapper } from '../../../components/FlexWrapper'
@@ -13,7 +14,16 @@ export const Main: React.FC = () => {
 						<S.Name>
 							I am <span>Svetlana Dyablo</span>
 						</S.Name>
-						<S.MainTitle>A Web Developer. </S.MainTitle>
+						{/* <S.MainTitle>A Web Developer. </S.MainTitle> */}
+						<S.MainTitle>
+							<Typewriter
+								options={{
+									strings: ['A Web Developer.', 'A Front-end Developer.'],
+									autoStart: true,
+									loop: true,
+								}}
+							/>
+						</S.MainTitle>
 					</div>
 					<S.PhotoWrapper>
 						<S.Photo src={image} alt='photo' />
