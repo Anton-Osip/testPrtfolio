@@ -45,9 +45,13 @@ export const Skills: React.FC = () => {
 				<SectionTitle>My Skills</SectionTitle>
 				<FlexWrapper wrap='wrap' justify='space-between'>
 					{SkillData.map(skill => (
-						<AttentionSeeker effect='rubberBand' cascade damping={0.2}>
+						<AttentionSeeker
+							key={skill.title}
+							effect='rubberBand'
+							cascade
+							damping={0.2}
+						>
 							<Skill
-								key={skill.title}
 								iconId={skill.iconId}
 								title={skill.title}
 								text={skill.text}

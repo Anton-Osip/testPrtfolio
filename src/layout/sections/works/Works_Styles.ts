@@ -13,7 +13,6 @@ const Works = styled.section`
 const Work = styled.div`
 	background-color: ${theme.colors.secondaryBg};
 
-	width: 330px;
 	flex-grow: 1;
 	@media ${theme.media.desktop} {
 		max-width: 540px;
