@@ -1,3 +1,4 @@
+import { AttentionSeeker } from 'react-awesome-reveal'
 import { Container } from '../../../components/Container'
 import { FlexWrapper } from '../../../components/FlexWrapper'
 import { SectionTitle } from '../../../components/SectionTitle'
@@ -44,12 +45,14 @@ export const Skills: React.FC = () => {
 				<SectionTitle>My Skills</SectionTitle>
 				<FlexWrapper wrap='wrap' justify='space-between'>
 					{SkillData.map(skill => (
-						<Skill
-							key={skill.title}
-							iconId={skill.iconId}
-							title={skill.title}
-							text={skill.text}
-						/>
+						<AttentionSeeker effect='rubberBand' cascade damping={0.2}>
+							<Skill
+								key={skill.title}
+								iconId={skill.iconId}
+								title={skill.title}
+								text={skill.text}
+							/>
+						</AttentionSeeker>
 					))}
 				</FlexWrapper>
 			</Container>
