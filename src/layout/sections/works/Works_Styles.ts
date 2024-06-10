@@ -13,7 +13,6 @@ const Works = styled.section`
 const Work = styled.div`
 	background-color: ${theme.colors.secondaryBg};
 
-	width: 330px;
 	flex-grow: 1;
 	@media ${theme.media.desktop} {
 		max-width: 540px;
@@ -43,19 +42,24 @@ const ImageWrapper = styled.div`
 		background-color: rgba(0, 0, 0, 0.3);
 		backdrop-filter: blur(4px);
 		opacity: 0;
+		transition: ${theme.animations.transition};
 	}
 	&:hover {
-		&::before,
+		&::before {
+			opacity: 1;
+		}
 		${Button} {
 			opacity: 1;
+			transform: translate(-50%, -50%);
 		}
 	}
 	${Button} {
 		position: absolute;
 		left: 50%;
 		top: 50%;
-		transform: translate(-50%, -50%);
+		transform: translate(-50%, -25%);
 		opacity: 0;
+		transition: ${theme.animations.transition};
 
 		&::before {
 			width: 100%;

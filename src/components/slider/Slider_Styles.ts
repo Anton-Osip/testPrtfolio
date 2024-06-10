@@ -3,6 +3,7 @@ import { theme } from '../../styles/Theme'
 
 const Slider = styled.div`
 	max-width: 500px;
+	width: 100%;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -27,6 +28,7 @@ const Pagination = styled.div`
 		height: 7px;
 		border-radius: 20px;
 		background-color: rgba(255, 255, 255, 0.5);
+
 		& + span {
 			margin-left: 5px;
 		}

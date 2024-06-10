@@ -1,3 +1,5 @@
+import Tilt from 'react-parallax-tilt'
+import Typewriter from 'typewriter-effect'
 import image from '../../../assets/images/photo.jpg'
 import { Container } from '../../../components/Container'
 import { FlexWrapper } from '../../../components/FlexWrapper'
@@ -5,7 +7,7 @@ import { S } from './Main_styles'
 
 export const Main: React.FC = () => {
 	return (
-		<S.Main>
+		<S.Main id='home'>
 			<Container>
 				<FlexWrapper align='center' justify='space-around' wrap='wrap'>
 					<div>
@@ -13,11 +15,22 @@ export const Main: React.FC = () => {
 						<S.Name>
 							I am <span>Svetlana Dyablo</span>
 						</S.Name>
-						<S.MainTitle>A Web Developer. </S.MainTitle>
+						{/* <S.MainTitle>A Web Developer. </S.MainTitle> */}
+						<S.MainTitle>
+							<Typewriter
+								options={{
+									strings: ['A Web Developer.', 'A Front-end Developer.'],
+									autoStart: true,
+									loop: true,
+								}}
+							/>
+						</S.MainTitle>
 					</div>
-					<S.PhotoWrapper>
-						<S.Photo src={image} alt='photo' />
-					</S.PhotoWrapper>
+					<Tilt>
+						<S.PhotoWrapper>
+							<S.Photo src={image} alt='photo' />
+						</S.PhotoWrapper>{' '}
+					</Tilt>
 				</FlexWrapper>
 			</Container>
 		</S.Main>
