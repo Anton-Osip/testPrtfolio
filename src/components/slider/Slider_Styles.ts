@@ -28,6 +28,7 @@ const Pagination = styled.div`
 		height: 7px;
 		border-radius: 20px;
 		background-color: rgba(255, 255, 255, 0.5);
+
 		& + span {
 			margin-left: 5px;
 		}
